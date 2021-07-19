@@ -1,3 +1,5 @@
+all: qa qb qc qd qe qf
+
 qa:
 	gcc -g a.c -o a.out
 qb:
@@ -13,3 +15,8 @@ qf:
 
 clean:
 	rm -f a.out b.out c.out queue e.out f.out
+
+indent:
+	clang-format --verbose -i *.c
+
+.PHONY: all qa qb qc qd qe qf clean indent
